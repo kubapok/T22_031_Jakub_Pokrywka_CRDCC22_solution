@@ -3,7 +3,6 @@ for i in  $TEST_DIR/*jpg ; do touch "test_predictions/out/labels/$(basename $i |
 for i  in ./test_predictions/out/labels/*txt ; do python change_to_nonrelative.py $i $i-nonrelative $(file ./test_predictions/out/$(basename $i | sed 's|txt|jpg|' ) | awk -F ' ' '{print $18}' ) ; done
 cat ./test_predictions/out/labels/*nonrelative | sort > submission.txt
 
-
 grep India submission.txt > India_sub.txt
 grep China submission.txt > China_sub.txt
 grep United submission.txt > USA_sub.txt

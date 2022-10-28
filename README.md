@@ -1,25 +1,52 @@
+# RDCC2022 challenge solution 
+
+This is a [RDC2022](https://crddc2022.sekilab.global/) challenge solution of kubapok.
+
+Here are sample predictions:
+
+
+![]() ![]() ![]() ![]()
+<img src="sample-predictions/Czech_000051.jpg" width="250" height="250" />
+<img src="sample-predictions/India_003905.jpg" width="250" height="250" />
+<img src="sample-predictions/United_States_005591.jpg" width="250" height="250" />
+
+This approach is based on training many models with different data augmentation settings. 
+The next model weights are initialized by the previous one, as in the picture below. This allows creating
+of an ensemble of large diversified models with no need for huge GPU resources.
+
+
+![]() ![]() ![]() ![]()
+<img src="imgs/traininf.png" />
+
+# How to use this repository
+
+
 ## Configuration
 
-Install yolov5 ( https://github.com/ultralytics/yolov5 ) in home directory.
+Install yolov5 (https://github.com/ultralytics/yolov5) in the home directory.
 
-Dataset should be in yolo format (relative width and height in objects). Script `labels_to_jpg.py` may be used.
+The dataset should be in yolo format (relative width and height in objects). Script `labels_to_jpg.py` may be used.
 
-Change paths to train dataset in first line in `cfg.yaml` file in each directory.
+I used only 600 images for the validation dataset from the competition dataset, and the rest went for the training dataset.
 
-Change path in `--source` parameter in test file in `xl-code-merge-11-hyp-high/2_prediction.sh`
+Change paths to train the dataset in the first line in `cfg.yaml` file in each directory.
 
-Set test path variable `TEST_DIR` in `xl-code-merge-11-hyp-high/3_create_sub.sh`
+Change path in `--source` parameter in test file in `inference/2_prediction.sh`
 
-
-## train
-
-run
-`bash train.sh`
+Set test path variable `TEST_DIR` in `inference/3_create_sub.sh`
 
 
-## inference
+## Training
 
-run
-`bash inference.sh`
+run:
 
-The prediction will appear in `xl-code-merge-11-hyp-high` directory.
+```bash train.sh```
+
+
+## Inference
+
+run:
+
+```bash inference.sh```
+
+The prediction will appear in `inference/` directory.

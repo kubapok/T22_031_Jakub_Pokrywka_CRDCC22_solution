@@ -1,0 +1,1 @@
+python ~/yolov5/train.py --img 1280 --project merge --name run  --batch 96 --weights ../l-model-hyps-med/merge/run/weights/last.pt --epochs 300 --data cfg.yaml  --cfg yolov5l6.yaml --save-period 10 --cache ram  --hyp ./hyp.scratch-high.yaml

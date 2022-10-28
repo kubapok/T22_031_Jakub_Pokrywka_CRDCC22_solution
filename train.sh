@@ -1,4 +1,4 @@
-for dir in code-merge-5-other-labels  xl-code-merge-11/ xl-code-merge-11-hyp-medium/ xl-code-merge-11-hyp-high/ 
+for dir in {l,xl}-model-hyps-{low,med,high}
 do
-	( cd $dir ; bash 1_train_no_pretrained.sh ) 
+	( cd $dir ; bash 1_train.sh )
 done
