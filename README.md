@@ -18,6 +18,18 @@ of an ensemble of large diversified models with no need for huge GPU resources.
 ![]() ![]() ![]() ![]()
 <img src="imgs/traininf.png" />
 
+## Model results
+
+| Country       | F1-score |
+|---------------|----------|
+| India         | 0.42     |
+| Japan         | 0.60     |
+| Norway        | 0.38     |
+| United States | 0.65     |
+| all           | 0.60     |
+| avarage       | 0.53     |
+
+
 # How to use this repository
 
 
