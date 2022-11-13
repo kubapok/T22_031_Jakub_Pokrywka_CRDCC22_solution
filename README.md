@@ -7,7 +7,7 @@ Here are sample predictions:
 
 ![]() ![]() ![]() ![]()
 <img src="sample-predictions/Czech_000051.jpg" width="250" height="250" />
-<img src="sample-predictions/India_003905.jpg" width="250" height="250" />
+<img src="sample-predictions/United_States_004820.jpg" width="250" height="250" />
 <img src="sample-predictions/United_States_005591.jpg" width="250" height="250" />
 
 This approach is based on training many models with different data augmentation settings. 
